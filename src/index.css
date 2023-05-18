@@ -4,6 +4,11 @@
   height: auto;
 }
 
+.product-image {
+  width: 290px;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +17,11 @@ html {
   font-family: Consolas;
   background-image: url('./assets/white_wall_hash.webp');
 
+}
+
+#products-index .card-title {
+  height: 2.5em;
+  overflow: hidden;
 }
 
 #products-index .card-body-custom {
@@ -31,4 +41,34 @@ html {
 #products-index .card-body-custom .carousel .slide img {
   width: 250px;
   height: auto;
+  
+}
+
+#products-index .carousel .thumbs li > img {
+  width: 60px;
+  border: 1px solid transparent !important
+}
+
+#products-index .red-button {
+  background-color: rgb(255, 90, 95);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  width: 135px;
+}
+
+#products-show .product-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5px;
+  align-items: center;
+}
+
+.product-image {
+  margin: 4px;
 }
