@@ -1,5 +1,7 @@
-#products-index img {
+#products-index .card-body-custom img {
+  vertical-align: middle;
   width: 250px;
+  height: auto;
 }
 
 html {
@@ -7,7 +9,7 @@ html {
 }
 
 #root {
-  font-family: Futura-light;
+  font-family: Consolas;
   background-image: url('./assets/white_wall_hash.webp');
 
 }
@@ -20,7 +22,7 @@ html {
   margin-top: 10px;
   padding-top: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   /* Changed from 'center' to 'flex-start' */
   align-items: center;
