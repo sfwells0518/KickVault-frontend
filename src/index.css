@@ -1,4 +1,4 @@
-#posts-index img {
+#products-index img {
   width: 250px;
 }
 
@@ -10,4 +10,18 @@ html {
   font-family: Futura-light;
   background-image: url('./assets/white_wall_hash.webp');
 
+}
+
+#products-index .card-body-custom {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Changed from 'center' to 'flex-start' */
+  align-items: center;
 }
