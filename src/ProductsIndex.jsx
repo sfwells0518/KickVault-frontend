@@ -1,3 +1,6 @@
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 export function ProductsIndex(props) {
   console.log(props.products);
   return (
@@ -10,13 +13,23 @@ export function ProductsIndex(props) {
               <div className="card-body card-body-custom d-flex flex-column">
                 <h4 className="card-title">{product.name}</h4>
                 <h6>{product.price}</h6>
-                <img src={product.images[0].url} alt="Product Image" className="mb-3" />
+
+                <Carousel showThumbs={false} dynamicHeight={true} emulateTouch={true}>
+                  {product.images.map((image, index) => (
+                    <div key={index}>
+                      <img src={image.url} alt="Product" />
+                    </div>
+                  ))}
+                </Carousel>
+
                 <p>{product.description}</p>
                 <br></br>
                 <div className="mt-auto text-center">
-                  <button className="red-button" onClick={() => {
-                    props.onShowProduct(product);
-                  }}
+                  <button
+                    className="red-button"
+                    onClick={() => {
+                      props.onShowProduct(product);
+                    }}
                   >
                     Buy Now
                   </button>

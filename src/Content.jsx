@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ProductsIndex } from "./ProductsIndex";
 import { ProductsShow } from "./ProductsShow";
 import { Modal } from "./Modal";

@@ -27,3 +27,8 @@ html {
   /* Changed from 'center' to 'flex-start' */
   align-items: center;
 }
+
+#products-index .card-body-custom .carousel .slide img {
+  width: 250px;
+  height: auto;
+}
