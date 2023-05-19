@@ -61,6 +61,18 @@ html {
   width: 135px;
 }
 
+.red-search-button {
+  background-color: rgb(255, 90, 95);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    width: 135px;
+}
+
 #products-show .product-images {
   display: flex;
   justify-content: center;
@@ -71,4 +83,12 @@ html {
 
 .product-image {
   margin: 4px;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.center-placeholder::placeholder {
+  text-align: center;
 }

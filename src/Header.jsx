@@ -17,16 +17,16 @@ export function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="nav nav-underline">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Home
+                Wishlist
               </a>
             </li>
 
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle text-primary"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -54,11 +54,51 @@ export function Header() {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">
+            <input className="form-control me-2 center-placeholder" type="search" placeholder="Product Search" aria-label="Search" />
+            <button className="red-search-button" type="submit">
               Search
             </button>
           </form>
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <a className="nav-link text-primary" href="#">
+                <img
+                  src="https://www.freeiconspng.com/thumbs/bags-icon/bag-icon-6.png"
+                  alt="Bag"
+                  style={{ width: "20px", marginRight: "5px" }}
+                />
+                Bag
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle text-primary"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profile
+              </a>
+              <ul className="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Register
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Sign In
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
