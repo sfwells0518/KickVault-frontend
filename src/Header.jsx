@@ -3,7 +3,7 @@ export function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Sam's Shoe Store ||
+          SW's Shoe Store ||
         </a>
         <button
           className="navbar-toggler"
@@ -55,7 +55,7 @@ export function Header() {
           </ul>
           <form className="d-flex" role="search">
             <input className="form-control me-2 center-placeholder" type="search" placeholder="Product Search" aria-label="Search" />
-            <button className="red-search-button" type="submit">
+            <button className="black-search-button" type="submit">
               Search
             </button>
           </form>
