@@ -6,7 +6,7 @@ export function ProductsIndex(props) {
   return (
     <div id="products-index" className="mt-4">
       <center>
-        <h1>All Products</h1>
+        <h1>All Shoes</h1>
       </center>
       <div className="row">
         {props.products.map((product) => (
@@ -23,8 +23,6 @@ export function ProductsIndex(props) {
                     </div>
                   ))}
                 </Carousel>
-
-                <p>{product.description}</p>
                 <br></br>
                 <div className="mt-auto text-center">
                   <button
