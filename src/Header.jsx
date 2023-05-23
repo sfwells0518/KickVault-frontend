@@ -1,10 +1,36 @@
+import { useState } from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import TextField from "@mui/material/TextField";
+
 export function Header() {
+  // State to handle visibility of search field
+  const [showSearch, setShowSearch] = useState(false);
+
+  const handleSearchClick = () => {
+    setShowSearch(!showSearch);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           SW's Shoe Store ||
         </a>
+
+        {/* Search Icon and Input field */}
+        <div className="nav-item" style={{ display: "flex", alignItems: "center" }}>
+          <a className="nav-link" onClick={handleSearchClick}>
+            <SearchIcon />
+          </a>
+          {showSearch &&
+            <TextField
+              autoFocus
+              onBlur={handleSearchClick}
+              variant="outlined"
+              size="small"
+              placeholder="Search Shoes"/>}
+        </div>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -22,75 +48,75 @@ export function Header() {
             <ul className="nav nav-underline">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                Wishlist
+                  Wishlist
                 </a>
               </li>
 
               <li className="nav-item dropdown">
                 <a
-                className="nav-link dropdown-toggle text-primary"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                  className="nav-link dropdown-toggle text-primary"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                Categories
+                  Categories
                 </a>
                 <ul className="dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="#">
-                    Lifestyle
+                      Lifestyle
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Airmax
+                      Airmax
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Jordan
+                      Jordan
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-            
+
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link text-primary" href="#">
                   <img
-                  src="https://www.freeiconspng.com/thumbs/bags-icon/bag-icon-6.png"
-                  alt="Bag"
-                  style={{ width: "20px", marginRight: "5px" }}
+                    src="https://www.freeiconspng.com/thumbs/bags-icon/bag-icon-6.png"
+                    alt="Bag"
+                    style={{ width: "20px", marginRight: "5px" }}
                   />
                   Bag
                 </a>
               </li>
               <li className="nav-item dropdown">
                 <a
-                className="nav-link dropdown-toggle text-primary"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                  className="nav-link dropdown-toggle text-primary"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                Profile
+                  Account
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li>
                     <a className="dropdown-item" href="#">
-                    Register
+                      Register
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Sign In
+                      Sign In
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Log Out
+                      Log Out
                     </a>
                   </li>
                 </ul>
