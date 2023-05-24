@@ -64,10 +64,13 @@ html {
   height: auto;
   
 }
+
 #products-index .carousel .thumbs li > img {
   width: 100%;
   border: .5px solid transparent !important;
 }
+
+
 
 #products-index .red-button {
   background-color: rgb(255, 90, 95);
@@ -90,17 +93,28 @@ html {
   font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s;
-  border-radius: 115px;
-  width: 150px;
+  border-radius: 120px;
+  width: 145px;
+  height: 40px;
+  margin-top: 15px;
+  
 }
 
-.mt-auto text-center {
-  padding-top: 1px;
-}
-.mt-auto {
-  padding-bottom: 13px;
-}
+.favorite-button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 120px;
+  width: 145px;
+  height: 40px;
+  margin-left: 5px;
+  margin-top: 15px;
 
+}
 
 #products-show .product-images {
   display: flex;

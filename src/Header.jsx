@@ -48,7 +48,7 @@ export function Header() {
             <ul className="nav nav-underline">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Wishlist
+                  Favorites
                 </a>
               </li>
 

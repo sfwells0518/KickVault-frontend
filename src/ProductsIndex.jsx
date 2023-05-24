@@ -18,7 +18,7 @@ export function ProductsIndex(props) {
 
                 <Carousel showThumbs={true} dynamicHeight={true} emulateTouch={true} showIndicators={true}>
                   {product.images.map((image, index) => (
-                    <div key={index}>
+                    <div key={index} className="thumb-images">
                       <img src={image.url} alt="Product" />
                     </div>
                   ))}
