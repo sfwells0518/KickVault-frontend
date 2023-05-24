@@ -106,12 +106,12 @@ export function Header() {
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li>
                     <a className="dropdown-item" href="#">
-                      Register
+                      Sign Up
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Sign In
+                      Log In
                     </a>
                   </li>
                   <li>

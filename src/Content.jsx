@@ -1,10 +1,15 @@
 import axios from "axios";
+import { Login } from "./Login";
 import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ProductsIndex } from "./ProductsIndex";
 import { ProductsShow } from "./ProductsShow";
+
 import { Modal } from "./Modal";
+
+
+import { Routes, Route } from "react-router-dom";
 
 
 export function Content() {
@@ -34,9 +39,13 @@ export function Content() {
   
   return (
     <div className="container">
-      <ProductsIndex products={products} onShowProduct={handleShowProduct} />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<ProductsIndex products={products} onShowProduct={handleShowProduct} />} />
+      </Routes>
+
       <Modal show={isProductsShowVisible} onClose={handleClose}>
-        <ProductsShow product={currentProduct} /> 
+        <ProductsShow product={currentProduct} />
       </Modal>
     </div>
   );
