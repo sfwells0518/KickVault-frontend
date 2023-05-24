@@ -6,7 +6,7 @@ export function ProductsIndex(props) {
   return (
     <div id="products-index" className="mt-4">
       <center>
-        <h1>All Shoes</h1>
+        <h1>Men's Shoes & Sneakers</h1>
       </center>
       <div className="row">
         {props.products.map((product) => (

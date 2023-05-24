@@ -4,14 +4,12 @@ export function ProductsShow(props) {
       <h4>{props.product.name}</h4>
       <p>{props.product.description}</p>
       <p>Price: {props.product.price}</p>
+      <div className="mt-auto">
+        <button className="add-to-bag-button">Add to Bag</button>
+      </div>
       <div className="product-images">
         {props.product.images.map((image, index) => (
-          <img
-            key={index}
-            src={image.url}
-            alt={`Product ${props.product.name}`}
-            className="product-image"
-          />
+          <img key={index} src={image.url} alt={`Product ${props.product.name}`} className="product-image" />
         ))}
       </div>
     </div>
