@@ -13,7 +13,7 @@ export function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           KickVault ||
         </a>
 
@@ -105,17 +105,17 @@ export function Header() {
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/signup">
                       Sign Up
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/login">
                       Log In
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/logout">
                       Log Out
                     </a>
                   </li>

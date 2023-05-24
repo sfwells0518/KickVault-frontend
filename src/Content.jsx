@@ -1,5 +1,7 @@
 import axios from "axios";
+import { SignUp } from "./SignUp";
 import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -40,7 +42,9 @@ export function Content() {
   return (
     <div className="container">
       <Routes>
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<LogoutLink />} />
         <Route path="/" element={<ProductsIndex products={products} onShowProduct={handleShowProduct} />} />
       </Routes>
 
