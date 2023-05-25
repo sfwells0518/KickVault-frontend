@@ -22,28 +22,36 @@ export function SignUp() {
   };
 
   return (
-    <div id="signup">
-      <h1>Signup</h1>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Name: <input name="name" type="text" />
+    <div className="form-wrapper">
+      <div className="form-box">
+        <form className="form">
+          <span className="title">Sign up</span>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+          <span className="subtitle">Create a free account with your email.</span>
+
+          <div className="form-container">
+            <input name="name" type="text" className="input" placeholder="Full Name" />
+            <input name="email" type="email" className="input" placeholder="Email" />
+            <input name="password" type="password" className="input" placeholder="Password" />
+            <input name="password_confirmation" type="password" className="input" placeholder="Password Confirmation" />
+          </div>
+          <button>Sign up</button>
+        </form>
+        <div className="form-section">
+          <p>
+            Have an account? <a href="/login">Log in</a>{" "}
+          </p>
         </div>
-        <div>
-          Email: <input name="email" type="email" />
-        </div>
-        <div>
-          Password: <input name="password" type="password" />
-        </div>
-        <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
-        </div>
-        <button type="submit">Signup</button>
-      </form>
+      </div>
     </div>
   );
+
+ 
 }
+
+
+
