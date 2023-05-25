@@ -231,8 +231,6 @@ html {
   align-items: center;
   min-height: 100vh;
   margin-top: -40px;
-  
-  /* This makes sure the wrapper takes up the full height of the viewport */
 }
 
 p {
@@ -245,4 +243,12 @@ p {
   color: red;
   font-size: 10px;
   margin-left: -10px;
+}
+
+
+#search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
 }

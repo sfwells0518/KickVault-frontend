@@ -1,6 +1,4 @@
-import { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import TextField from "@mui/material/TextField";
+
 import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
@@ -30,34 +28,13 @@ export function Header() {
        </li>
      );
   }
-
-  // State to handle visibility of search field
-  const [showSearch, setShowSearch] = useState(false);
-
-  const handleSearchClick = () => {
-    setShowSearch(!showSearch);
-  };
-
-  return (
+  
+ return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           KickVault ||
         </a>
-
-        {/* Search Icon and Input field */}
-        <div className="nav-item" style={{ display: "flex", alignItems: "center" }}>
-          <a className="nav-link" onClick={handleSearchClick}>
-            <SearchIcon />
-          </a>
-          {showSearch &&
-            <TextField
-              autoFocus
-              onBlur={handleSearchClick}
-              variant="outlined"
-              size="small"
-              placeholder="Search Shoes"/>}
-        </div>
 
         <button
           className="navbar-toggler"
