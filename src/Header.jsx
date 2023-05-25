@@ -1,8 +1,36 @@
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
+
+  let authenticationLinks;
+  if (localStorage.jwt === undefined) {
+    authenticationLinks = (
+      <>
+        <li>
+          <a className="dropdown-item" href="/signup">
+            Sign Up
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="/login">
+            Log In
+          </a>
+        </li>
+      </>
+    );
+  } else {
+     authenticationLinks = (
+       <li>
+         <a className="dropdown-item" href="/logout">
+           Log Out
+         </a>
+       </li>
+     );
+  }
+
   // State to handle visibility of search field
   const [showSearch, setShowSearch] = useState(false);
 
@@ -104,21 +132,7 @@ export function Header() {
                   Account
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end">
-                  <li>
-                    <a className="dropdown-item" href="/signup">
-                      Sign Up
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/login">
-                      Log In
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/logout">
-                      Log Out
-                    </a>
-                  </li>
+                  {authenticationLinks}
                 </ul>
               </li>
             </ul>

@@ -3,6 +3,18 @@ import { useState } from "react";
 
 export function SignUp() {
   const [errors, setErrors] = useState([]);
+  const [password, setPassword] = useState("");
+
+  let passwordLength;
+  if (password.length > 12) {
+    passwordLength = <small id="bad">Your password exceeded the 12 character limit</small>
+  } else {
+    passwordLength = (
+      <p>
+        <small>{12 - password.length} characters remaining</small>
+      </p>
+    );
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,14 +48,24 @@ export function SignUp() {
           <div className="form-container">
             <input name="name" type="text" className="input" placeholder="Full Name" />
             <input name="email" type="email" className="input" placeholder="Email" />
-            <input name="password" type="password" className="input" placeholder="Password" />
+            <input
+              name="password"
+              type="password"
+              className="input"
+              placeholder="Password"
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+            {passwordLength}
             <input name="password_confirmation" type="password" className="input" placeholder="Password Confirmation" />
           </div>
           <button>Sign up</button>
         </form>
         <div className="form-section">
           <p>
-            Have an account? <a href="/login">Log in</a>{" "}
+            Have an account? <a href="/login">Log In</a>{" "}
           </p>
         </div>
       </div>

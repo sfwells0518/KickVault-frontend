@@ -231,5 +231,18 @@ html {
   align-items: center;
   min-height: 100vh;
   margin-top: -40px;
+  
   /* This makes sure the wrapper takes up the full height of the viewport */
+}
+
+p {
+  font-size: 12px;
+  padding-top: 3px;
+  margin-left: -110px;
+}
+
+#bad {
+  color: red;
+  font-size: 10px;
+  margin-left: -10px;
 }
