@@ -28,23 +28,42 @@ export function Login() {
       });
   };
 
-  return (
-    <div id="login">
-      <h1>Login</h1>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Email: <input name="email" type="email" />
-        </div>
-        <div>
-          Password: <input name="password" type="password" />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
+ return (
+   <div className="login-form-wrapper">
+     <div className="form-box">
+       <center>
+         <span className="title">Log In</span>
+       </center>
+       <ul>
+         {errors.map((error) => (
+           <li key={error}>{error}</li>
+         ))}
+       </ul>
+       <div className="form-container">
+         <form onSubmit={handleSubmit} className="form">
+           <input name="email" type="email" className="input" placeholder="Email" />
+           <input
+             name="password"
+             type="password"
+             className="input"
+             placeholder="Password"
+             onChange={(event) => {
+               setPassword(event.target.value);
+             }}
+           />
+           <button type="submit">Login</button>
+         </form>
+       </div>
+     </div>
+   </div>
+ );
+
+
+
+  
+     
+       
+         
+
+          
 }

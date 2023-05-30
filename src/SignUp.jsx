@@ -34,10 +34,10 @@ export function SignUp() {
   };
 
   return (
-    <div className="form-wrapper">
+    <div className="signup-form-wrapper">
       <div className="form-box">
         <form className="form">
-          <span className="title">Sign up</span>
+          <span className="title">Sign Up</span>
           <ul>
             {errors.map((error) => (
               <li key={error}>{error}</li>
@@ -64,9 +64,10 @@ export function SignUp() {
           <button>Sign up</button>
         </form>
         <div className="form-section">
-          <p>
+          <h6>
             Have an account? <a href="/login">Log In</a>{" "}
-          </p>
+
+          </h6>
         </div>
       </div>
     </div>

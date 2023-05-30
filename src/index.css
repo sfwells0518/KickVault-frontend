@@ -149,12 +149,14 @@ html {
   padding: 32px 24px 24px;
   gap: 16px;
   text-align: center;
+  justify-content: center;
 }
 
 /*Form text*/
 .title {
   font-weight: bold;
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .subtitle {
@@ -186,7 +188,6 @@ html {
 
 }
 
-
 .form-section {
   padding: 16px;
   font-size: .85rem;
@@ -206,6 +207,7 @@ html {
 .form-section a:hover {
   color: #005ce6;
   text-decoration: underline;
+
 }
 
 /*Button*/
@@ -225,12 +227,22 @@ html {
   background-color: #005ce6;
 }
 
-.form-wrapper {
+
+
+.signup-form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-top: -40px;
+  margin-top: -30px;
+}
+
+.login-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -100px;
 }
 
 p {
@@ -251,4 +263,5 @@ p {
   justify-content: center;
   align-items: center;
   margin-right: 15px;
+  border-radius: 25px;
 }

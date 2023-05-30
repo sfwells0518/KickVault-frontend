@@ -25,9 +25,10 @@ export function ProductsIndex(props) {
       </center>
 
       <div className="row">
-        <div id="search">
+        <div className="search">
+          <center>
             <p>
-              Search:
+              Explore:
               <input
                 type="text"
                 value={searchTerm}
@@ -36,8 +37,9 @@ export function ProductsIndex(props) {
                 }}
               />
             </p>
-          </div>      
-      
+          </center>
+        </div>
+        
         {props.products
           .filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
           .map((product) => (
