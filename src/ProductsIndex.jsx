@@ -39,7 +39,7 @@ export function ProductsIndex(props) {
             </p>
           </center>
         </div>
-        
+
         {props.products
           .filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
           .map((product) => (
@@ -49,7 +49,13 @@ export function ProductsIndex(props) {
                   <h4 className="card-title">{product.name}</h4>
                   <h6>${product.price}</h6>
 
-                  <Carousel showThumbs={true} dynamicHeight={true} emulateTouch={true} showIndicators={true}>
+                  <Carousel
+                    showThumbs={true}
+                    dynamicHeight={true}
+                    emulateTouch={false}
+                    showIndicators={false}
+                    showArrows={false}
+                  >
                     {product.images.map((image, index) => (
                       <div key={index} className="thumb-images">
                         <img src={image.url} alt="Product" />
